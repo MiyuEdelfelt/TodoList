@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Todo List</h3>
+                <hr>
+                <form class="row">
+                    <div class="col-9">
+                        <input type="text" class="form-control" id="newTask" placeholder="Nueva tarea">
+                    </div>
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-success w-100">Agregar</button>
+                    </div>
+                </form>
+                <div class="alert alert-danger mt-3 d-none" id="errorMessage">Por favor, ingresa una tarea válida.</div>
+                <div class="mt-3 row">
+                    <div class="col-6">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5>Total</h5>
+                                <p class="display-4" id="total">0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5>Realizadas</h5>
+                                <p class="display-4" id="completed">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table mt-3">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Tarea</th>
+                            <th scope="col">Completar</th>
+                            <th scope="col">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskList">
+                        <!-- Tareas dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script defer src="assets/js/script.js"></script>
+</body>
+</html>
